@@ -1,0 +1,47 @@
+# app.py
+from flask import Flask, request, render_template_string
+import joblib
+import numpy as np
+
+app = Flask(__name__)
+
+# Load the saved model
+model = joblib.load('models/model.pkl')
+
+# HTML template
+HTML = """
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Breast Cancer Predictor</title>
+</head>
+<body style="font-family:Arial; text-align:center; margin-top:40px;">
+    <h2>🩺 Breast Cancer Prediction</h2>
+    <p>Enter 30 feature values (comma separated):</p>
+    <form method="post">
+        <textarea name="features" rows="4" cols="70" placeholder="e.g. 17.99,10.38,122.8,1001,0.1184,..."></textarea><br><br>
+        <input type="submit" value="Predict" style="padding:10px 20px;">
+    </form>
+    {% if result %}
+        <h3>Prediction: {{ result }}</h3>
+    {% endif %}
+</body>
+</html>
+"""
+
+@app.route('/', methods=['GET', 'POST'])
+def home():
+    result = None
+    if request.method == 'POST':
+        try:
+            # Get input values
+            features = [float(x.strip()) for x in request.form['features'].split(',')]
+            arr = np.array(features).reshape(1, -1)
+            prediction = model.predict(arr)[0]
+            result = "Malignant (Cancer)" if prediction == 1 else "Benign (No Cancer)"
+        except:
+            result = "⚠️ Invalid Input! Please enter 30 numeric values."
+    return render_template_string(HTML, result=result)
+
+if __name__ == "__main__":
+    app.run(debug=True)
