@@ -20,3 +20,6 @@ col_names = [
 ]
 
 df = pd.read_csv('Dataset/wdbc.csv', header=None, names=col_names)
+
+# 2️⃣ Preprocessing
+df = df.drop(columns=['id'])  # ID not useful
