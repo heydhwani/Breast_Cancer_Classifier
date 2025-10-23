@@ -43,32 +43,7 @@ Breast_Cancer_Classifier/
 
 ---
 
-## ⚙️ Installation
 
-
-
-
-1. **Create virtual environment and activate**
-bash
-python -m venv venv
-source venv/bin/activate  # Linux/Mac
-venv\Scripts\activate     # Windows
-
-2. **Install dependencies**
-
-bash
-pip install -r requirements.txt
-
-
-3. **Run the Flask app locally**
-bash
-python app.py
-
-
-- Open browser: http://127.0.0.1:5000/
-
-- Postman JSON API: http://127.0.0.1:5000/predict
-```
 ## 🖥️ Usage
 ### Browser
 
