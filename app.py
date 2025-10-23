@@ -30,7 +30,7 @@ HTML = """
 </html>
 """
 
-@app.route('/', methods=['GET', 'POST'])
+@app.route('/predict', methods=['GET', 'POST'])
 def home():
     result = None
     if request.method == 'POST':
