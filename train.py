@@ -41,3 +41,8 @@ X_train, X_test, y_train, y_test = train_test_split(
 # 4️⃣ Train model
 model = RandomForestClassifier(n_estimators=100, random_state=42)
 model.fit(X_train, y_train)
+
+# 5️⃣ Evaluate
+y_pred = model.predict(X_test)
+print("✅ Accuracy:", accuracy_score(y_test, y_pred))
+print("\nClassification Report:\n", classification_report(y_test, y_pred))
