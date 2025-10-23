@@ -45,25 +45,22 @@ Breast_Cancer_Classifier/
 
 ## ⚙️ Installation
 
-1. **Clone the repository**
-```bash
-git clone https://github.com/yourusername/Breast_Cancer_Classifier.git
-cd Breast_Cancer_Classifier
 
 
-2. **Create virtual environment and activate**
+
+1. **Create virtual environment and activate**
 bash
 python -m venv venv
 source venv/bin/activate  # Linux/Mac
 venv\Scripts\activate     # Windows
 
-3. **Install dependencies**
+2. **Install dependencies**
 
 bash
 pip install -r requirements.txt
 
 
-4. **Run the Flask app locally**
+3. **Run the Flask app locally**
 bash
 python app.py
 
