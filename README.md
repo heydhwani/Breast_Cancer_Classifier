@@ -52,19 +52,19 @@ cd Breast_Cancer_Classifier
 
 
 2. **Create virtual environment and activate**
-```bash
+bash
 python -m venv venv
 source venv/bin/activate  # Linux/Mac
 venv\Scripts\activate     # Windows
 
 3. **Install dependencies**
 
-```bash
+bash
 pip install -r requirements.txt
 
 
 4. **Run the Flask app locally**
-```bash
+bash
 python app.py
 
 
@@ -90,7 +90,7 @@ python app.py
 Benign (B)	0.98	0.99	0.98
 Malignant (M)	0.97	0.95	0.96
 Avg/Total	0.98	0.98	0.98```
-``` 
+
 
 ## 🛠️ Technologies Used
 
