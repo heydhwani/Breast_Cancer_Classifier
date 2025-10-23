@@ -18,3 +18,5 @@ col_names = [
     'radius_worst', 'texture_worst', 'perimeter_worst', 'area_worst', 'smoothness_worst',
     'compactness_worst', 'concavity_worst', 'concave_points_worst', 'symmetry_worst', 'fractal_dimension_worst'
 ]
+
+df = pd.read_csv('Dataset/wdbc.csv', header=None, names=col_names)
