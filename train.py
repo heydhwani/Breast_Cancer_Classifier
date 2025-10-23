@@ -28,3 +28,7 @@ df = df.drop(columns=['id'])  # ID not useful
 le = LabelEncoder()
 df['diagnosis'] = le.fit_transform(df['diagnosis'])
 # (M → 1, B → 0 automatically)
+
+# Split into features and labels
+X = df.drop(columns=['diagnosis'])
+y = df['diagnosis']
