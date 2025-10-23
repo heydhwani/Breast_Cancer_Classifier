@@ -23,3 +23,8 @@ df = pd.read_csv('Dataset/wdbc.csv', header=None, names=col_names)
 
 # 2️⃣ Preprocessing
 df = df.drop(columns=['id'])  # ID not useful
+
+# Encode diagnosis (M/B → 1/0) using LabelEncoder
+le = LabelEncoder()
+df['diagnosis'] = le.fit_transform(df['diagnosis'])
+# (M → 1, B → 0 automatically)
