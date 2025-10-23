@@ -89,9 +89,9 @@ python app.py
 ```Class	Precision	Recall	F1-score
 Benign (B)	0.98	0.99	0.98
 Malignant (M)	0.97	0.95	0.96
-Avg/Total	0.98	0.98	0.98```
+Avg/Total	0.98	0.98	0.98
 
-
+```
 ## 🛠️ Technologies Used
 
 - Python 3.x
