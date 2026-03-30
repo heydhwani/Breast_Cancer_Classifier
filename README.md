@@ -30,7 +30,7 @@ This project is a **machine learning web application** that predicts whether a t
 ```
 Breast_Cancer_Classifier/
 │
-├── data/                         # Dataset file
+├── data/                         # Dataset files
 │ └── wdbc.csv
 │
 ├── models/                       # Saved trained model
